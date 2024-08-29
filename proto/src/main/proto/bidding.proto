@@ -1,0 +1,83 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+option java_package = "com.grpcjava.bidding";
+
+package bidding;
+
+message BidRequest {
+  string id = 1;
+  Imp imp = 2;
+  Site site = 3;
+  Device device = 4;
+  User user = 5;
+}
+
+message Imp {
+  string id = 1;
+  Banner banner = 2;
+  Video video = 3;
+  string bidfloor = 4;
+  string bidfloorcur = 5;
+}
+
+message Banner {
+  repeated int32 w = 1;
+  repeated int32 h = 2;
+  int32 pos = 3;
+}
+
+message Video {
+  repeated string mimes = 1;
+  int32 minduration = 2;
+  int32 maxduration = 3;
+}
+
+message Site {
+  string id = 1;
+  string domain = 2;
+}
+
+message Device {
+  string ua = 1;
+  string ip = 2;
+  Geo geo = 3;
+}
+
+message Geo {
+  float lat = 1;
+  float lon = 2;
+  string country = 3;
+}
+
+message User {
+  string id = 1;
+  string buyeruid = 2;
+}
+
+// BidResponse message
+message BidResponse {
+  string id = 1;
+  repeated SeatBid seatbid = 2;
+  string bidid = 3;
+  string cur = 4;
+}
+
+message SeatBid {
+  repeated Bid bid = 1;
+  string seat = 2;
+}
+
+message Bid {
+  string id = 1;
+  string impid = 2;
+  double price = 3;
+  string adm = 4;
+  string crid = 5;
+  string adomain = 6;
+}
+
+service BiddingService {
+  rpc RequestBid(BidRequest) returns (BidResponse) {};
+}

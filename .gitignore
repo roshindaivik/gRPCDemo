@@ -1,0 +1,145 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Maven / Gradle
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+.mvn/wrapper/MavenWrapperDownloader.java
+
+# Eclipse / IDEA / NetBeans
+*.swp
+*.swo
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.ipr
+*.iws
+.nb-gradle/
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Eclipse configuration files
+.cproject
+.project
+.settings/
+
+# Mac OS / Linux / Windows system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig
+*.rej
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# VS Code
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Temporary directories
+temp/
+tmp/
+out/
+
+# JetBrains
+# User-specific stuff:
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Database
+*.db
+
+# Spring Boot specific
+spring.log
+
+# Ignore IntelliJ IDEA project files
+*.ipr
+*.iws
+*.iml
+.idea/
+
+# Node.js modules (if any)
+node_modules/
+
+# Generated files
+target/
+out/
+
+# Test results
+surefire-reports/
+test-results/
+
+# Static file resources (typically for web applications)
+static/
+
+# Sensitive files (e.g., API keys, passwords)
+*.env
+.env.*
+
+# Docker
+docker-compose.override.yml
+.docker/
+docker-compose*.yml
+
+# Kubernetes
+*.yaml
+*.yml
+!k8s/*.yaml
+!k8s/*.yml
+
+# Others
+*.key
+*.pem
+
+docs/
+adexchange/.mvn
+ssp/.mvn
+ssp/target
+proto/target
+adexchange/target
+
