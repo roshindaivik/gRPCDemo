@@ -9,9 +9,6 @@ import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 
-import java.util.Collections;
-
-
 @GrpcService
 @Slf4j
 public class SspService {
@@ -25,6 +22,7 @@ public class SspService {
                 .usePlaintext()
                 .build();
         this.adExchangeStub = BiddingServiceGrpc.newBlockingStub(channel);
+        //single request single response
     }
 
     public BidResponseDTO requestBid(BidRequestDTO bidRequestDTO) {
